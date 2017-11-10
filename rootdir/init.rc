@@ -516,6 +516,10 @@ on post-fs-data
 
     init_user0
 
+    # Start zygote early
+    start zygote
+    start zygote_secondary
+
     # Set SELinux security contexts on upgrade or policy update.
     restorecon --recursive --skip-ce /data
 
